@@ -1,1 +1,89 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1a202c;
+  --accent-color: #2b6cb0;
+  --button-bg: var(--accent-color);
+  --button-text: #ffffff;
+}
+
+[data-theme='dark'] {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --accent-color: #38b2ac;
+  --button-bg: var(--accent-color);
+  --button-text: #121212;
+}
+
+body, header, nav, main, section, footer {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Theme toggle specific */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 0.4em 1em;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: auto;
+}
+
+.theme-toggle:hover {
+  background-color: var(--accent-color);
+  color: var(--button-text);
+}
+
+.theme-toggle i {
+  font-size: 1.2em;
+}
+
+/* Fade-in animation */
+.fade-transition {
+  animation: fade 0.4s ease;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* Smooth fade for background and text color */
+body, header, nav, main, section, footer {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* For project cards, buttons, etc. */
+.project-card, button {
+  transition: background-color 0.4s ease, color 0.4s ease, border 0.4s ease;
+}
+

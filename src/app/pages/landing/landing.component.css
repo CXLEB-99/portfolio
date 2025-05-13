@@ -1,0 +1,29 @@
+.hero {
+    text-align: center;
+    padding: 2em;
+  }
+  
+  .bucket-list {
+    padding: 2em;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1em;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    background-color: var(--accent-color);
+    padding: 1em;
+  }
+  
+  nav a {
+    color: #fff;
+    font-weight: bold;
+  }
+  

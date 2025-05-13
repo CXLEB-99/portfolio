@@ -1,0 +1,25 @@
+.resume {
+    padding: 2em;
+  }
+  
+  .resume button {
+    margin-bottom: 1.5em;
+  }
+  
+  .section {
+    margin-bottom: 2em;
+  }
+  
+  .section h3 {
+    color: var(--accent-color);
+  }
+  
+  .section ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .section li {
+    margin-bottom: 0.5em;
+  }
+  

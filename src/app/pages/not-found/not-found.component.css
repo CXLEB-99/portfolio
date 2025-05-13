@@ -1,0 +1,23 @@
+.not-found {
+    text-align: center;
+    padding: 4em 2em;
+  }
+  
+  .not-found h1 {
+    font-size: 5rem;
+    color: var(--accent-color);
+  }
+  
+  .not-found p {
+    font-size: 1.2rem;
+    margin: 1em 0;
+  }
+  
+  .not-found img {
+    margin: 2em 0;
+  }
+  
+  .not-found button {
+    padding: 0.75em 1.5em;
+  }
+  
