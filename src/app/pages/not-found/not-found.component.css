@@ -1,23 +1,56 @@
 .not-found {
-    text-align: center;
-    padding: 4em 2em;
+  text-align: center;
+  padding: 2em;
+}
+
+.game-container {
+  position: relative;
+  width: 600px;
+  height: 150px;
+  margin: 2em auto;
+  border: 2px solid var(--accent-color);
+  background-color: #eef1f5;
+  overflow: hidden;
+}
+
+.robot, .obstacle {
+  position: absolute;
+  bottom: 0;
+}
+
+.robot {
+  width: 60px;
+  left: 50px;
+  transition: bottom 0.2s ease;
+}
+
+.obstacle {
+  width: 40px;
+  right: -40px;
+  animation: moveObstacle 2s linear infinite;
+}
+
+.jump {
+  bottom: 80px !important;
+}
+
+@keyframes moveObstacle {
+  0% {
+    right: -40px;
   }
-  
-  .not-found h1 {
-    font-size: 5rem;
-    color: var(--accent-color);
+  100% {
+    right: 640px;
   }
-  
-  .not-found p {
-    font-size: 1.2rem;
-    margin: 1em 0;
-  }
-  
-  .not-found img {
-    margin: 2em 0;
-  }
-  
-  .not-found button {
-    padding: 0.75em 1.5em;
-  }
-  
+}
+
+#game-message {
+  font-weight: bold;
+  color: red;
+  height: 2em;
+}
+
+#score {
+  font-size: 1.5rem;
+  margin-top: 1em;
+  color: var(--accent-color);
+}

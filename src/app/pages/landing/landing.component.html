@@ -1,34 +1,60 @@
-<header>
-    <h1>Caleb Goforth</h1>
-    <nav>
+<header class="page-header">
+  <div class="header-container">
+    <div class="logo">
+      <span class="monogram">CG</span>
+      <h1 class="name">Caleb Goforth</h1>
+    </div>
+    <nav class="nav-links">
       <a routerLink="/">Home</a>
       <a routerLink="/about">About</a>
       <a routerLink="/projects">Projects</a>
       <a routerLink="/resume">Resume</a>
     </nav>
-  </header>
-  
-  <main>
-    <section class="hero">
-      <h2>Hi, I'm Caleb Goforth</h2>
-      <p>Passionate web developer tackling the problems of tomorrow.</p>
-      <button routerLink="/projects">View My Work</button>
-    </section>
-  
-    <section class="bucket-list">
-      <h3>My Bucket List</h3>
-      <ul>
-        <li>Build a virtual robotics game</li>
-        <li>Launch a blog series for new devs</li>
-        <li>Work at a forward-thinking tech company</li>
-      </ul>
-    </section>
-  </main>
-  
-  <footer>
-    <p>Connect with me:</p>
-    <a href="#">GitHub</a> |
-    <a href="#">LinkedIn</a> |
-    <a href="mailto:caleb@example.com">Email</a>
-  </footer>
-  
+  </div>
+</header>
+
+<main>
+  <!-- Hero in Terminal Style -->
+  <section class="hero-terminal">
+    <div class="terminal-bar">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+    </div>
+    <div class="terminal-content">
+      <p><span class="prompt">> </span>Hi, I'm Caleb Goforth</p>
+      <p><span class="prompt">> </span>Passionate web developer tackling the problems of tomorrow.</p>
+      <p><span class="prompt">> </span><button routerLink="/projects">View My Work</button></p>
+    </div>
+  </section>
+
+  <!-- New Timeline-Style Bucket List -->
+  <section class="bucket-list-timeline">
+    <h3>📝 My Bucket List</h3>
+    <div class="timeline">
+      <div
+        *ngFor="let item of bucketList; let i = index"
+        class="timeline-item"
+        [class.left]="i % 2 === 0"
+        [class.right]="i % 2 !== 0"
+        [class.active]="selectedItem === i"
+        (click)="selectItem(i)"
+        [attr.aria-label]="'Milestone ' + item.title"
+        tabindex="0"
+      >
+        <div class="content">
+          <h4>{{ item.title }}</h4>
+          <p>{{ item.description }}</p>
+          <span class="status">{{ item.status }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Connect with me:</p>
+  <a href="#">GitHub</a> |
+  <a href="#">LinkedIn</a> |
+  <a href="mailto:caleb@example.com">Email</a>
+</footer>
