@@ -1,0 +1,27 @@
+<nav [ngClass]="{ 'landing-nav': isLanding, 'default-nav': !isLanding }">
+    <div class="nav-content">
+      <div class="logo">CG</div>
+  
+      <!-- Desktop Nav -->
+      <ul *ngIf="!isLanding" class="nav-links desktop">
+        <li><a routerLink="/" routerLinkActive="active" (click)="closeMenu()">Home</a></li>
+        <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
+        <li><a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">Projects</a></li>
+        <li><a routerLink="/resume" routerLinkActive="active" (click)="closeMenu()">Resume</a></li>
+      </ul>
+  
+      <!-- Hamburger Icon -->
+      <div *ngIf="!isLanding" class="hamburger" (click)="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  
+    <!-- Mobile Dropdown -->
+    <ul *ngIf="menuOpen" class="nav-links mobile">
+      <li><a routerLink="/" routerLinkActive="active" (click)="closeMenu()">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
+      <li><a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">Projects</a></li>
+      <li><a routerLink="/resume" routerLinkActive="active" (click)="closeMenu()">Resume</a></li>
+    </ul>
+  </nav>
+  <p>nav works!</p>
