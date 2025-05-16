@@ -1,36 +1,65 @@
 <section class="resume">
-    <h2>Resume</h2>
-    <a href="assets/caleb.resume.2025.pdf" download>
-      <button>Download Resume</button>
-    </a>
-  
-    <div class="section">
-      <h3>Experience</h3>
-      <ul>
-        <li>
-          <strong>Web Developer Intern</strong> – TechStart Inc. (2024)
-          <p>Worked on bug fixing, responsive design, and Angular components for a logistics dashboard.</p>
-        </li>
-      </ul>
+  <h2 class="resume-title">📄 My Resume</h2>
+  <p class="resume-motto">"I turn ideas into tools and problems into code."</p>
+
+  <!-- Resume Download -->
+  <div class="download-block">
+    <p>Download My Resume</p>
+    <div class="download-links">
+      <a href="assets/caleb.resume.2025.pdf" download>PDF</a>
+      <a href="assets/caleb.resume.2025.docx" download>DOCX</a>
+      <a href="assets/caleb.resume.2025.txt" download>TXT</a>
+      <a href="assets/caleb.resume.2025.json" download>JSON</a>
     </div>
-  
-    <div class="section">
-      <h3>Education</h3>
-      <ul>
-        <li>B.S. in Full-Stack Web Development – Bellevue University (2025)</li>
-      </ul>
+  </div>
+
+  <!-- Timeline -->
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="marker"></div>
+      <div class="content">
+        <h3>Web Developer Intern – TechStart Inc. (2024)</h3>
+        <p>Bug fixing, responsive design, and Angular components for a logistics dashboard.</p>
+      </div>
     </div>
-  
-    <div class="section">
-      <h3>Skills</h3>
-      <p>HTML, CSS, JavaScript, Angular, Node.js, MongoDB, Python, Git</p>
+
+    <div class="timeline-item">
+      <div class="marker"></div>
+      <div class="content">
+        <h3>B.S. in Full-Stack Web Development – Bellevue University (2025)</h3>
+        <p>Focused on JavaScript, frameworks, databases, and modern web development practices.</p>
+      </div>
     </div>
-  
-    <div class="section">
-      <h3>Certifications</h3>
-      <ul>
-        <li>MongoDB Basics – MongoDB University (2024)</li>
-      </ul>
+  </div>
+
+  <!-- Skills -->
+  <div class="skills-section">
+    <h3>🛠 Skills</h3>
+    <div class="skill-tags">
+      <span *ngFor="let skill of skills" class="tag">{{ skill }}</span>
     </div>
-  </section>
-  
+  </div>
+
+  <!-- Tech Stack Icons -->
+  <div class="tech-stack">
+    <h3>⚙️ My Tech Stack</h3>
+    <div class="tech-logos">
+      <img src="assets/icons/html5.svg" alt="HTML5" />
+      <img src="assets/icons/css3.svg" alt="CSS3" />
+      <img src="assets/icons/javascript.svg" alt="JavaScript" />
+      <img src="assets/icons/angular.svg" alt="Angular" />
+      <img src="assets/icons/nodejs.svg" alt="Node.js" />
+      <img src="assets/icons/mongodb.svg" alt="MongoDB" />
+      <img src="assets/icons/python.svg" alt="Python" />
+      <img src="assets/icons/git.svg" alt="Git" />
+    </div>
+  </div>
+
+  <!-- Certifications -->
+  <div class="cert-section">
+    <h3>🎓 Certifications</h3>
+    <ul>
+      <li>MongoDB Basics – MongoDB University (2024)</li>
+    </ul>
+  </div>
+</section>
