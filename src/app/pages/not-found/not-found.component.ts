@@ -11,14 +11,14 @@ import { RouterModule } from '@angular/router';
 })
 export class NotFoundComponent implements AfterViewInit {
   ngAfterViewInit(): void {
-    const robot = document.getElementById('robot')!;
-    const obstacle = document.getElementById('obstacle')!;
-    const gameMessage = document.getElementById('game-message')!;
-    const scoreElement = document.getElementById('score')!;
-
     let score = 0;
     let gameOver = false;
     let hasScored = false;
+
+    const robot = document.getElementById('robot')!;
+    const obstacle = document.getElementById('obstacle')!;
+    const scoreElement = document.getElementById('score')!;
+    const gameMessage = document.getElementById('game-message')!;
 
     document.addEventListener('keydown', function (event) {
       if (event.code === 'Space' && !robot.classList.contains('jump') && !gameOver) {
@@ -35,33 +35,29 @@ export class NotFoundComponent implements AfterViewInit {
       const robotBottom = parseInt(getComputedStyle(robot).getPropertyValue('bottom'));
       const obstacleRight = parseInt(getComputedStyle(obstacle).getPropertyValue('right'));
 
-      // Collision detection window
-      const robotHitZoneStart = 540;
-      const robotHitZoneEnd = 560;
+      const hitStart = 520;
+      const hitEnd = 560;
 
-      // Collision detection (easy mode)
-      if (
-        obstacleRight > robotHitZoneStart &&
-        obstacleRight < robotHitZoneEnd &&
-        robotBottom < 40
-      ) {
-        gameMessage.innerText = 'Game Over! Refresh to try again.';
+      if (obstacleRight > hitStart && obstacleRight < hitEnd && robotBottom < 40) {
+        gameMessage.innerText = 'Game Over! Refresh or Retry.';
         obstacle.style.animation = 'none';
         obstacle.style.display = 'none';
         gameOver = true;
       }
 
-      // Scoring logic (once per pass)
-      if (obstacleRight < 40 && !hasScored) {
+      if (obstacleRight + 40 < 50 && !hasScored) {
         score++;
-        hasScored = true;
         scoreElement.innerText = `Score: ${score}`;
+        hasScored = true;
       }
 
-      // Reset flag for scoring after obstacle reappears
-      if (obstacleRight > 580) {
+      if (obstacleRight > 560) {
         hasScored = false;
       }
     }, 20);
+  }
+
+  restartGame(): void {
+    window.location.reload();
   }
 }

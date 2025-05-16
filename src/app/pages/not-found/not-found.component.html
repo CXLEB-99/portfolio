@@ -1,6 +1,6 @@
 <section class="not-found">
-  <h1>404 - Page Not Found</h1>
-  <p>Looks like this robot lost its way...</p>
+  <h1 class="glitch-text">404 - Page Not Found</h1>
+  <p class="random-quote">“Oops! This page has wandered off 🤖”</p>
 
   <h2 id="score">Score: 0</h2>
 
@@ -11,5 +11,8 @@
 
   <p id="game-message"></p>
 
-  <button routerLink="/">Return to Home</button>
+  <div style="margin-top: 2em;">
+    <button class="return-home" (click)="restartGame()">🔁 Retry</button>
+    <a routerLink="/" class="return-home">Return to Base</a>
+  </div>
 </section>

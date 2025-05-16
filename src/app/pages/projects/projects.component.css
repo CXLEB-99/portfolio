@@ -43,11 +43,13 @@
 }
 
 .project-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 6px;
+  padding: 1.5em;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  height: 100px;
+  width: auto;
   margin-bottom: 1em;
+  object-fit: contain;
 }
 
 .project-info h3 {
@@ -73,7 +75,7 @@
 }
 
 /* Placeholder Styling */
-.placeholder {
+.project-card.placeholder {
   background-color: #f0f0f0;
   color: #999;
   border-style: dashed;
@@ -87,68 +89,54 @@
   position: relative;
 }
 
-[data-theme='dark'] .placeholder {
-  background-color: #252525;
-  color: #aaaaaa;
-  border-color: var(--accent-color);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.placeholder-img {
+.project-card.placeholder .placeholder-img {
   width: 100%;
   height: 180px;
   background-color: #ccc;
   border-radius: 6px;
   margin-bottom: 1em;
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-[data-theme='dark'] .placeholder-img {
-  background-color: #333;
+.project-card.placeholder .placeholder-img::before {
+  content: '';
+  background: url('/assets/icons/cog.svg') no-repeat center;
+  background-size: 60px;
+  width: 60px;
+  height: 60px;
 }
 
-.placeholder-info h3 {
+.project-card.placeholder .placeholder-info h3 {
   margin: 0.5em 0;
   color: inherit;
 }
 
-.placeholder-info p {
+.project-card.placeholder .placeholder-info p {
   font-size: 0.9rem;
   color: inherit;
-}
-
-/* Under Construction Animation */
-.placeholder-img::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -50%;
-  width: 200%;
-  height: 100%;
-  background: repeating-linear-gradient(
-    -45deg,
-    rgba(255, 215, 0, 0.2) 0px,
-    rgba(255, 215, 0, 0.2) 10px,
-    transparent 10px,
-    transparent 20px
-  );
-  animation: stripe 2s linear infinite;
-  pointer-events: none;
-  z-index: 1;
-}
-
-@keyframes stripe {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
 }
 
 @media screen and (max-width: 600px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ✅ DARK MODE FIX using ::ng-deep to break encapsulation */
+::ng-deep html[data-theme='dark'] .project-card.placeholder {
+  background-color: #252525 !important;
+  color: #aaaaaa !important;
+  border-color: var(--accent-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+::ng-deep html[data-theme='dark'] .project-card.placeholder .placeholder-img {
+  background-color: #121212 !important;
+}
+
+::ng-deep html[data-theme='dark'] .project-card.placeholder .placeholder-info h3,
+::ng-deep html[data-theme='dark'] .project-card.placeholder .placeholder-info p {
+  color: #cccccc !important;
 }

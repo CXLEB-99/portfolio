@@ -5,6 +5,11 @@
     <span class="dot green"></span>
   </div>
 
+  <!-- 👇 Helper message for new users -->
+  <p class="terminal-hint">
+    Type a command like <code>whoami</code>, <code>skills</code>, or <code>journey</code> to get started.
+  </p>
+
   <div class="terminal-body">
     <div *ngFor="let line of terminalOutput" [@fadeIn] class="terminal-line">
       <div class="line prompt">> {{ line.command }}</div>
@@ -35,6 +40,7 @@
         class="terminal-input"
         aria-label="Type a command"
         autocomplete="off"
+        placeholder="Try: whoami, skills, journey..."
       />
     </form>
   </div>

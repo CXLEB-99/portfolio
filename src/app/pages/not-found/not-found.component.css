@@ -1,6 +1,44 @@
 .not-found {
   text-align: center;
   padding: 2em;
+  font-family: 'Courier New', monospace;
+  color: var(--text-color);
+}
+
+.glitch-text {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  position: relative;
+  animation: glitch 1s infinite;
+  margin-bottom: 0.5em;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 0 red; }
+  20% { text-shadow: -2px 0 blue; }
+  40% { text-shadow: 2px 0 green; }
+  60% { text-shadow: -2px 0 purple; }
+  80% { text-shadow: 2px 0 cyan; }
+  100% { text-shadow: 0 0 var(--accent-color); }
+}
+
+.random-quote {
+  font-style: italic;
+  margin-bottom: 1.5em;
+  color: var(--text-color);
+}
+
+.ascii-terminal {
+  font-size: 0.9rem;
+  background-color: #1a1a1a;
+  color: #00ffcc;
+  max-width: 600px;
+  margin: 0 auto 2em;
+  padding: 1em;
+  border-radius: 6px;
+  border: 1px solid var(--accent-color);
+  white-space: pre-wrap;
+  text-align: left;
 }
 
 .game-container {
@@ -35,12 +73,8 @@
 }
 
 @keyframes moveObstacle {
-  0% {
-    right: -40px;
-  }
-  100% {
-    right: 640px;
-  }
+  0% { right: -40px; }
+  100% { right: 640px; }
 }
 
 #game-message {
@@ -53,4 +87,24 @@
   font-size: 1.5rem;
   margin-top: 1em;
   color: var(--accent-color);
+}
+
+.return-home {
+  padding: 1em 2em;
+  background: radial-gradient(circle, var(--accent-color), #222);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 15px var(--accent-color);
+  animation: pulse 2s infinite;
+  margin: 1em;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 15px var(--accent-color); }
+  50% { box-shadow: 0 0 25px var(--accent-color); }
+  100% { box-shadow: 0 0 15px var(--accent-color); }
 }
