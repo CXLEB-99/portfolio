@@ -1,0 +1,89 @@
+{
+  "name": "Caleb Goforth",
+  "title": "Web Developer",
+  "contact": {
+    "phone": "(330)-979-8539",
+    "email": "calebgoforth99@gmail.com",
+    "location": "Howland, Ohio, USA"
+  },
+  "objective": "Detail-oriented and motivated web development student with hands-on experience in front-end and back-end technologies. Seeking an entry-level role to apply and grow.",
+  "skills": {
+    "languages": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "Python"
+    ],
+    "frameworks_libraries": [
+      "Node.js",
+      "Express.js",
+      "Angular"
+    ],
+    "databases": [
+      "MongoDB",
+      "NoSQL",
+      "SQL",
+      "MySQL"
+    ],
+    "tools": [
+      "Git",
+      "GitHub",
+      "Jest",
+      "REST APIs"
+    ],
+    "other": [
+      "Responsive Web Design",
+      "Accessibility (WCAG)",
+      "Agile Development",
+      "SPA\u2019s",
+      "WMS"
+    ]
+  },
+  "experience": [
+    {
+      "title": "Freelance Web Developer",
+      "dates": "2024 \u2013 Present",
+      "projects": [
+        {
+          "name": "Church Website Project",
+          "description": "Developing a modern website for a local church using Wix and custom JavaScript via Velo."
+        }
+      ]
+    },
+    {
+      "title": "Core Trainer",
+      "company": "Macy\u2019s Logistics Warehouse",
+      "dates": "Oct 2021 \u2013 Present",
+      "highlights": [
+        "Led training for new hires, streamlining onboarding.",
+        "Created instructional materials for complex processes.",
+        "Quickly adapted to internal software tools."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "BioSite Project",
+      "year": 2024,
+      "description": "Responsive biography site using HTML/CSS. Hosted on GitHub.",
+      "link": "https://github.com/CXLEB-99/bioSite"
+    }
+  ],
+  "education": [
+    {
+      "school": "Bellevue University",
+      "degree": "Bachelor of Science in Web Development",
+      "location": "Bellevue, NE",
+      "graduation": "Expected 2026"
+    },
+    {
+      "school": "ETI Technical College",
+      "degree": "College Degree in Welding/Fitting",
+      "location": "Niles, OH",
+      "dates": "2019 \u2013 2020"
+    }
+  ],
+  "communication": "Strong written and verbal communication skills with the ability to collaborate across teams.",
+  "leadership": "Capable of managing multiple projects and meeting tight deadlines with high quality standards."
+}
