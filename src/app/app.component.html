@@ -1,7 +1,17 @@
 <div [class.fade-transition]="true">
   <header>
-    <app-nav></app-nav>
+    <nav style="display: flex; align-items: center; padding: 1em;">
+      <a routerLink="/" style="margin-right: 1em;">Home</a>
+      <a routerLink="/about" style="margin-right: 1em;">About</a>
+      <a routerLink="/projects" style="margin-right: 1em;">Projects</a>
+      <a routerLink="/resume" style="margin-right: 1em;">Resume</a>
+      <button class="theme-toggle" (click)="toggleTheme()">
+        <i class="fas" [ngClass]="isDarkMode ? 'fa-sun' : 'fa-moon'"></i>
+        {{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}
+      </button>
+    </nav>
   </header>
+
   <main>
     <router-outlet></router-outlet>
   </main>

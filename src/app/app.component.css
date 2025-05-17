@@ -1,0 +1,66 @@
+.page-header {
+    background-color: var(--accent-color);
+    padding: 1em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 1em;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  
+  .monogram {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .name {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  .nav-bar {
+    display: flex;
+    gap: 1.2em;
+    align-items: center;
+  }
+  
+  .nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-bar a.active {
+    border-bottom: 2px solid white;
+  }
+  
+  .nav-bar button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .nav-bar button:hover {
+    transform: scale(1.1);
+  }
+  
+  .fade-transition {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  

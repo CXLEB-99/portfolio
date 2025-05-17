@@ -84,7 +84,7 @@ export class AboutComponent {
         };
         setTimeout(() => {
           this.terminalOutput[index].response =
-            '<img src="assets/profile.jpg" alt="Caleb Goforth" class="terminal-avatar" />';
+            '<img src="assets/profile.jpeg" alt="Caleb Goforth" class="terminal-avatar" />';
           this.terminalOutput[index].typing = false;
           this.isTyping = false;
         }, 300);
